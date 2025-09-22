@@ -4,18 +4,24 @@ import { Button } from "./components/Button";
 
 export default function Letter() {
   return (
-    <div className="w-full h-screen">
-      <Vortex
-        backgroundColor="#000000"
-        particleCount={500}
-        baseHue={230}
-        rangeY={200}
-        baseSpeed={0.2}
-        rangeSpeed={1.5}
-        baseRadius={1}
-        rangeRadius={2}
-        className="w-full h-full flex flex-col items-center justify-center p-4 text-white"
-      >
+    <div className="relative w-full h-screen">
+      {/* Full-screen Vortex background */}
+      <div className="fixed inset-0 w-full h-full">
+        <Vortex
+          backgroundColor="#000000"
+          particleCount={500}
+          baseHue={230}
+          rangeY={200}
+          baseSpeed={0.2}
+          rangeSpeed={1.5}
+          baseRadius={1}
+          rangeRadius={2}
+          className="w-full h-full"
+        />
+      </div>
+
+      {/* Foreground content */}
+      <div className="relative z-10 flex items-center justify-center w-full h-full p-4 text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +50,7 @@ export default function Letter() {
             </Button>
           </div>
         </motion.div>
-      </Vortex>
+      </div>
     </div>
   );
 }

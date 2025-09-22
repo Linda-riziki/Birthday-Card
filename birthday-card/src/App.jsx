@@ -62,18 +62,24 @@ function App() {
   }, [showCard]);
 
   return (
-    <div className="w-full h-screen">
-      <Vortex
-        backgroundColor="#000000"
-        particleCount={500}
-        baseHue={230}
-        rangeY={800}
-        baseSpeed={0.2}
-        rangeSpeed={1.5}
-        baseRadius={1}
-        rangeRadius={2}
-        className="w-full h-full flex flex-col items-center justify-center gap-6 text-white p-4"
-      >
+    <div className="relative w-full h-screen">
+      {/* Full-screen Vortex background */}
+      <div className="fixed inset-0 w-full h-full">
+        <Vortex
+          backgroundColor="#000000"
+          particleCount={500}
+          baseHue={230}
+          rangeY={800}
+          baseSpeed={0.2}
+          rangeSpeed={1.5}
+          baseRadius={1}
+          rangeRadius={2}
+          className="w-full h-full"
+        />
+      </div>
+
+      {/* Foreground content */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-6 text-white p-4">
         {!showCard && (
           <Button onClick={() => setShowCard(true)}>Click Me!</Button>
         )}
@@ -112,7 +118,7 @@ function App() {
         )}
 
         <a href="/letter">🎂</a>
-      </Vortex>
+      </div>
     </div>
   );
 }
