@@ -103,14 +103,17 @@ function App() {
               <BackgroundLines className="flex flex-col items-center justify-center min-h-[75vh] gap-6 bg-gradient-to-b from-blue-600 to-purple-700 p-4">
                 <div className="flex flex-col items-center bg-gradient-to-b from-purple-200 to-blue-400 rounded-2xl p-4 mt-4">
                   <img
-                    src="/friend.jpg"
+                    src="/friend1.jpg"
                     alt="Birthday Friend"
-                    className="w-full h-64 object-cover rounded-xl shadow-lg"
+                    className="w-full h-90 object-cover rounded-xl shadow-lg"
                   />
                   <p className="mt-4 text-lg sm:text-xl font-semibold text-center text-blue-800 p-2">
-                    Happy Birthday, Branice!🎉 
-                    With such a beautiful soul like yours, you deserve everything and more.
+                    Happy Birthday, Love🎉...
+                    With such a beautiful soul like yours, you deserve everything and more. I am so happy you were born.
                   </p>
+
+              <p className="text-blue-600">Coded with love❤️,</p>
+              <p className="text-blue-600">Yours and no one's ~ Linda</p>
                 </div>
               </BackgroundLines>
             </CometCard>
